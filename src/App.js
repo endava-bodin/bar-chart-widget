@@ -5,6 +5,18 @@ import './App.css';
 
 function App() {
 
+    const legendClickHandler = (props) => {
+      console.log("**************************");
+      console.log(props);
+      console.log("**************************");
+    }
+
+    // const selectBarHandler = (props) => {
+    //   console.log("^^^^^^^^^^^^^^^^^^^^^");
+    //   console.log(props);
+    //   console.log("^^^^^^^^^^^^^^^^^^^^^");
+    // }
+
     return (
       <ChartComponent
         primaryXAxis={{
@@ -35,6 +47,8 @@ function App() {
         chartArea={{ border: { width: 0 } }}
         width='100%'
         height='100%'
+        legendClick={legendClickHandler}
+        // selectionComplete={selectBarHandler}
       >
         <Inject services={[BarSeries, Category, Legend, DataLabel, Tooltip]}/>
         <SeriesCollectionDirective>
@@ -46,7 +60,7 @@ function App() {
             name={dataSegmented[0][0].position}
             pointColorMapping= 'point'
             legendShape='Circle'
-            // columnSpacing={0.5}
+            columnSpacing={0.02}
             // columnWidthInPixel={14}
             marker={{
                 dataLabel: {
@@ -55,7 +69,7 @@ function App() {
                     font: { fontWeight: '600', color: '#ffffff' },
                 },
             }}
-             columnWidth={1} columnSpacing={0}
+             columnWidth={1}
           ></SeriesDirective>
           <SeriesDirective
             type='Bar'
@@ -65,7 +79,7 @@ function App() {
             name={dataSegmented[1][0].position}
             pointColorMapping= 'point'
             legendShape='Circle'
-            // columnSpacing={0.5}
+            columnSpacing={0.02}
             // columnWidthInPixel={14}
             marker={{
                 dataLabel: {
@@ -74,7 +88,7 @@ function App() {
                     font: { fontWeight: '600', color: '#ffffff' },
                 },
             }}
-             columnWidth={1} columnSpacing={0}
+             columnWidth={1}
           ></SeriesDirective>
           <SeriesDirective
             type='Bar'
@@ -84,7 +98,7 @@ function App() {
             name={dataSegmented[2][0].position}
             pointColorMapping= 'point'
             legendShape='Circle'
-            // columnSpacing={0.5}
+            columnSpacing={0.02}
             // columnWidthInPixel={14}
             marker={{
                 dataLabel: {
@@ -93,7 +107,7 @@ function App() {
                     font: { fontWeight: '600', color: '#ffffff' },
                 },
             }}
-             columnWidth={1} columnSpacing={0}
+             columnWidth={1}
           ></SeriesDirective>
           <SeriesDirective
             type='Bar'
@@ -103,7 +117,7 @@ function App() {
             name={dataSegmented[3][0].position}
             pointColorMapping= 'point'
             legendShape='Circle'
-            // columnSpacing={0.5}
+            columnSpacing={0.02}
             // columnWidthInPixel={14}
             marker={{
                 dataLabel: {
@@ -112,7 +126,7 @@ function App() {
                     font: { fontWeight: '600', color: '#ffffff' },
                 },
             }}
-             columnWidth={1} columnSpacing={0}
+             columnWidth={1}
           ></SeriesDirective>
           <SeriesDirective
             type='Bar'
@@ -122,7 +136,7 @@ function App() {
             name={dataSegmented[4][0].position}
             pointColorMapping= 'point'
             legendShape='Circle'
-            // columnSpacing={0.5}
+            columnSpacing={0.02}
             // columnWidthInPixel={14}
             marker={{
                 dataLabel: {
@@ -131,7 +145,7 @@ function App() {
                     font: { fontWeight: '600', color: '#ffffff' },
                 },
             }}
-             columnWidth={1} columnSpacing={0}
+             columnWidth={1}
           ></SeriesDirective>
           <SeriesDirective
             type='Bar'
@@ -141,7 +155,7 @@ function App() {
             name={dataSegmented[5][0].position}
             pointColorMapping= 'point'
             legendShape='Circle'
-            // columnSpacing={0.5}
+            columnSpacing={0.02}
             // columnWidthInPixel={14}
             marker={{
                 dataLabel: {
@@ -150,7 +164,7 @@ function App() {
                     font: { fontWeight: '600', color: '#ffffff' },
                 },
             }}
-             columnWidth={1} columnSpacing={0}
+             columnWidth={1}
           ></SeriesDirective>
         </SeriesCollectionDirective>
       </ChartComponent>

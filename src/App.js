@@ -3,18 +3,23 @@ import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Leg
 import { data } from './data/datasource';
 import './App.css';
 
-function App() {
+function App(props) {
 
-    const legendClickHandler = (props) => {
-      console.log("**************************");
-      console.log(props);
-      console.log("**************************");
+    const legendClickHandler = (data) => {
+      // console.log("**************************");
+      // // console.log(props);
+      // console.log(data);
+      // console.log("**************************");
     }
 
-    const selectBarHandler = (props) => {
-      console.log("^^^^^^^^^^^^^^^^^^^^^");
-      console.log(props);
-      console.log("^^^^^^^^^^^^^^^^^^^^^");
+    const selectBarHandler = (data) => {
+      const publishAction = {
+        channel: "bar_chart_selection",
+        payload: {
+          selected: data?.selectedDataValues[0]?.x,
+        },
+      };
+      props?.config?.communicationService.publish(publishAction);
     }
 
     return (

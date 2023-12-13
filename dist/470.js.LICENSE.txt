@@ -1,0 +1,19 @@
+/*! Apply the style for chart */
+
+/*! Bind the Event handler */
+
+/*! Calculate column size */
+
+/*! Calculate row size */
+
+/*! Find the Events type */
+
+/*! Generate axis labels */
+
+/*! Generate axis range */
+
+/*! Set theme */
+
+/*! Set theme for accumulation chart */
+
+/*! UnBind the Event handler */
